@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>JQVMap - World Map</title>
+
     <link rel="stylesheet" type="text/css" href="css/jqvmap.css" media="screen"/>
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -8,11 +9,23 @@
     <script type="text/javascript" src="js/jquery.vmap.world.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/jquery.vmap.sampledata.js"></script>
 
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-      jQuery('#vmap').vectorMap({ map: 'world_en' });
-    });
+    <script>
+      jQuery(document).ready(function () {
+        jQuery('#vmap').vectorMap({
+          map: 'world_en',
+          backgroundColor: '#333333',
+          color: '#ffffff',
+          hoverOpacity: 0.7,
+          selectedColor: '#666666',
+          enableZoom: true,
+          showTooltip: true,
+          scaleColors: ['#C8EEFF', '#006491'],
+          values: sample_data,
+          normalizeFunction: 'polynomial'
+        });
+      });
     </script>
+
   </head>
   <body>
     <div id="vmap" style="width: 600px; height: 400px;"></div>
