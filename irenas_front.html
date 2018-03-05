@@ -3,6 +3,7 @@
     <title>JQVMap - World Map</title>
 <h1> The WFF </h1>
 
+
     <link href="../map.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/jqvmap.css" media="screen"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +30,10 @@
           showTooltip: true,
           scaleColors: ['#C6ECD9', '#1f6040'],
           values: sample_data,
-          normalizeFunction: 'polynomial'
+          normalizeFunction: 'polynomial',
+          pins: {
+            "ru": "hello"
+          }
         });
       });
     </script>
