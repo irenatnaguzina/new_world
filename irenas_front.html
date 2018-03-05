@@ -12,7 +12,9 @@
     <script type="text/javascript" src="js/jquery.vmap.sampledata.js"></script>
 
   <style type="text/css">
-  div#vmap {margin:0 auto 0 auto; }
+  div#vmap {
+      position: absolute;
+      margin:0 auto 0 auto;}
   </style>
 
     <script>
@@ -25,7 +27,7 @@
           selectedColor: '#666666',
           enableZoom: true,
           showTooltip: true,
-          scaleColors: ['#C8EEFF', '#006491'],
+          scaleColors: ['#C6ECD9', '#1f6040'],
           values: sample_data,
           normalizeFunction: 'polynomial'
         });
@@ -33,6 +35,6 @@
     </script>
   </head>
   <body>
-    <div id="vmap" style="width: 600px; height: 400px;"></div>
+    <div id="vmap" style="width: 800px; height: 450px;"></div>
   </body>
 </html>
