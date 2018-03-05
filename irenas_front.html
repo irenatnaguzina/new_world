@@ -22,16 +22,37 @@
       jQuery(document).ready(function () {
         jQuery('#vmap').vectorMap({
           map: 'world_en',
+          pinMode: 'content',
           backgroundColor: '#333333',
           color: '#ffffff',
           hoverOpacity: 0.7,
           selectedColor: '#666666',
-          enableZoom: true,
           showTooltip: true,
-          scaleColors: ['#C6ECD9', '#1f6040'],
+          scaleColors: ['#FFFFCC', '#336600'],
           values: sample_data,
           normalizeFunction: 'polynomial'
         });
+        jQuery('#vmap').vectorMap(
+{
+    onLabelShow: function(event, label, code)
+    {
+        if (code == 'ca')
+        {
+            // Label for Canada
+            label.html('<div class="map-tooltip><h2 class="header"><b>Canada</b></h2><p class="description">Hello.<br/>How are you doing?</p></div>');
+        }
+        else if (code == 'ru')
+        {
+            // Label for Russia
+            label.html('<div class="map-tooltip><h1 class="header"><b>Russian Federation</b></h1><p class="description">Privet.<br/>Kak dela?</p></div>');
+        }
+        if (code == 'us')
+        {
+            // Label for the States
+            label.html('<div class="map-tooltip><h1 class="header"><b>The United States</b></h1><p class="description">Hi.<br/>How is it going?</p></div>');
+        }
+    },
+});
       });
     </script>
   </head>
