@@ -83,45 +83,38 @@ body {
 .fa-facebook {
   background: #3B5998;
   color: white;
-  text-align: center;
 }
 
 .fa-twitter {
   background: #55ACEE;
   color: white;
-  text-align: center;
 }
 
 .fa-instagram {
   background: #125688;
   color: white;
-  text-align: center;
 }
 
 .fa-youtube {
   background: #bb0000;
   color: white;
-  text-align: center;
 }
 
 .fa-rss {
   background: #ff6600;
   color: white;
-  text-align: center;
 }
 
 
 input[type="submit"] {
   background: red;
   color: white;
-  text-align: center;
 }
 
 input {
   border: 0;
   padding: 10px;
   font-size: 14px;
-  text-align: center;
 }
 
 h1 {

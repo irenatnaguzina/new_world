@@ -16,6 +16,11 @@
   div#vmap {
       position: absolute;
       margin:0 auto 0 auto;}
+
+.map-tooltip {
+  width: 50px;
+}
+
   </style>
 
     <script>
@@ -36,20 +41,99 @@
 {
     onLabelShow: function(event, label, code)
     {
+
         if (code == 'ca')
         {
             // Label for Canada
-            label.html('<div class="map-tooltip><h2 class="header"><b>Canada</b></h2><p class="description">Hello.<br/>How are you doing?</p></div>');
+            label.html('<div class="map-tooltip><h2 class="header"><b>Canada</b></h2><p class="description">Polar bear<br/>Info</p>info2</div>');
         }
         else if (code == 'ru')
         {
             // Label for Russia
-            label.html('<div class="map-tooltip><h1 class="header"><b>Russian Federation</b></h1><p class="description">Privet.<br/>Kak dela?</p></div>');
+            label.html('<div class="map-tooltip><h1 class="header"><b>Russian Federation</b></h1><p class="description">Amur leopard<br/>info</p>info2</div>');
         }
         if (code == 'us')
         {
             // Label for the States
-            label.html('<div class="map-tooltip><h1 class="header"><b>The United States</b></h1><p class="description">Hi.<br/>How is it going?</p></div>');
+            label.html('<div class="map-tooltip><h1 class="header"><b>The United States</b></h1><p class="description">Bald eagle<br/>info</p>info2</div>');
+        }
+
+        if (code == 'id')
+        {
+            // Label for the Indonesia
+            label.html('<div class="map-tooltip><h1 class="header"><b>Indonesia</b></h1><p class="description">Orangutan<br/>info</p>info2</div>');
+        }
+
+        if (code == 'za')
+        {
+            // Label for the South Africa
+            label.html('<div class="map-tooltip><h1 class="header"><b>South Africa</b></h1><p class="description">Cheetah<br/>Predicted to be less than 8000 left in the wild due to habitat loss and poaching from farmers</p>Cheetahs are the fastest land animal, with a top speed of 120 kph and an 8 metre stride when running!</div>');
+        }
+
+        if (code == 'cg')
+        {
+            // Label for the Congo
+            label.html('<div class="map-tooltip><h1 class="header"><b>Congo</b></h1><p class="description">Mountain Gorilla<br/>info</p>info2</div>');
+        }
+
+        if (code == 'cm')
+        {
+            // Label for the Cameroon
+            label.html('<div class="map-tooltip><h1 class="header"><b>Cameroon</b></h1><p class="description">Pangolin<br/>info</p>info2</div>');
+        }
+
+        if (code == 'au')
+        {
+            // Label for the Australia
+            label.html('<div class="map-tooltip><h1 class="header"><b>Australia and Tasmania</b></h1><p class="description">Tasmanian devil<br/>info</p>info2</div>');
+        }
+
+        if (code == 'tz')
+        {
+            // Label for the Tanzania
+            label.html('<div class="map-tooltip><h1 class="header"><b>Tanzania</b></h1><p class="description">African painted dogs<br/>Info</p>info2</div>');
+        }
+
+        if (code == 'th')
+        {
+            // Label for the Thailand
+            label.html('<div class="map-tooltip><h1 class="header"><b>Thailand</b></h1><p class="description">Tiger<br/>Info</p>info2</div>');
+        }
+
+        if (code == 'ca')
+        {
+            // Label for the Canada
+            label.html('<div class="map-tooltip><h1 class="header"><b>Canada</b></h1><p class="description">Polar bear<br/>Info</p>info2</div>');
+        }
+
+        if (code == 'cn')
+        {
+            // Label for the China
+            label.html('<div class="map-tooltip><h1 class="header"><b>China</b></h1><p class="description">Giant panda<br/>Info</p>info2</div>');
+        }
+
+        if (code == 'in')
+        {
+            // Label for the India
+            label.html('<div class="map-tooltip><h1 class="header"><b>India</b></h1><p class="description">Asian elephant<br/>Info</p>info2</div>');
+        }
+
+        if (code == 'ke')
+        {
+            // Label for the Kenya
+            label.html('<div class="map-tooltip><h1 class="header"><b>Kenya</b></h1><p class="description">Rhino<br/>Info</p>info2</div>');
+        }
+
+        if (code == 'mn')
+        {
+            // Label for the Mongolia
+            label.html('<div class="map-tooltip><h1 class="header"><b>Mongolia</b></h1><p class="description">Snow leopard<br/>Info</p>info2</div>');
+        }
+
+        if (code == 'br')
+        {
+            // Label for the Brazil
+            label.html('<div class="map-tooltip><h1 class="header"><b>Brazil</b></h1><p class="description">Jagaur<br/>Info</p>info2</div>');
         }
     },
 });
