@@ -48,3 +48,13 @@
   width: 100%;
   height: 500px;
 }
+
+h1 {
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+body {
+	background-position: center;
+	background-size: cover;
+}
