@@ -10,9 +10,6 @@
     <script type="text/javascript" src="js/jquery.vmap.world.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/jquery.vmap.sampledata.js"></script>
 
-
-
-
   </head>
 <h1> Endangered species around the world </h1>
 <body background="gifs/jungle2.jpg">
@@ -72,7 +69,7 @@
         if (code == 'za')
         {
             // Label for the South Africa - cheetah
-            label.html('<div class="map-tooltip><h1 class="header"><b>South Africa</b></h1><p class="description"><b>Cheetah</b><br/>Predicted to be less than 8000 left in the wild<br/>due to habitat loss and poaching from farmers</p>Cheetahs are the fastest land animal, with a<br/>top speed of 120 kph and an 8 metre stride<br/>when running!<br/><img src="gifs/cheetah.gif" alt="Cheetah" height=175 width=300></img></div></div>');
+            label.html('<div class="map-tooltip><h1 class="header"><b>South Africa</b></h1><p class="description"><b>Cheetah</b><br/>Predicted to be less than 8000 left in the wild<br/>due to habitat loss and poaching from farmers</p>Cheetahs are the fastest land animal, with a<br/>top speed of 120 kph and an 8 metre stride<br/>when running!<br/><div id="vmap" style="width: 400px; height: 350px;"><img src="gifs/cheetah.gif" alt="Cheetah"></img></div></div>');
         }
 
         if (code == 'cd')
@@ -147,6 +144,11 @@
 
   <body>
     <div id="vmap" style="width: 800px; height: 450px;"></div>
+      <img src="gifs/monkey.gif" alt="Monkey"></img>
+      <img src="gifs/amur_leopard.gif" alt="Amurleopard"></img>
+      <img src="gifs/bald_eagle.gif" alt="Bald Eagle"></img>
+      <img src="gifs/polar bear.gif" alt="Polar Bear"></img>
+      <img src="gifs/cheetah.gif" alt="Cheetah"></img>
   </body>
 
 </body>
