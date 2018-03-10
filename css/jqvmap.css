@@ -51,11 +51,12 @@
 
 h1 {
 	text-align: center;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-family: 'Pacifico', cursive;
+	font-size: 60px;
 }
 
 body {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-family: 'Pacifico', cursive;
 	background-position: center;
 	background-size: cover;
 }
@@ -63,7 +64,7 @@ body {
 .topnav {
     background-color: #333;
     overflow: hidden;
-    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-family: 'Pacifico', cursive;
 }
 
 .topnav a {
@@ -81,7 +82,7 @@ body {
 }
 
 .topnav a.active {
-    background-color: #4CAF50;
+    background-color: #006600;
     color: white;
 }
 
@@ -89,12 +90,14 @@ body {
 input[type="submit"] {
   background: red;
   color: white;
+	font-family: 'Pacifico', cursive;
 }
 
 input {
   border: 0;
   padding: 10px;
   font-size: 14px;
+	font-family: 'Pacifico', cursive;
 }
 
 /*For the social media buttons*/
@@ -137,11 +140,10 @@ input {
   color: white;
 }
 
-footer {
-  position:fixed;
-   left:0px;
+.footer {
+  position:relative;
    bottom:0px;
-   height:30px;
+   height:240px;
    width:100%;
-   background:#006600;
+   background: #006600;
 }
