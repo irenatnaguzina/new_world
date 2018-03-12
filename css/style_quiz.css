@@ -154,4 +154,5 @@ p {
 
 .tweet_tab {
   float: right;
+  text-align: right;
 }
