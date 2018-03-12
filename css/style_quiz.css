@@ -36,8 +36,9 @@ transition: all 0.2s ease-in-out;
 transition: all 0.2s ease-in-out;}
 
 body {
-  background: #cce6ff;
   font-family:Verdana, Arial, Helvetica, sans-serif;
+  background-position: center;
+  background-size: cover;
 }
 
 .topnav {
@@ -147,5 +148,10 @@ p {
    bottom:0px;
    height:240px;
    width:100%;
-   background:#006600;
+   background: #b3e6ff;
+   opacity: 0.9;
+}
+
+.tweet_tab {
+  float: right;
 }
