@@ -1,14 +1,18 @@
 
-.scp-quizzes-main{ width:100%; font-family:Verdana, Arial, Helvetica, sans-serif;}
+.scp-quizzes-main{ width:100%; font-family: 'Pacifico', cursive;;
+}
+
 .scp-quizzes-data{
 box-shadow: 0px 1px 3px -1px #DCDCDC;
 padding:10px;
 margin-top:15px;
 }
+
 pre{ border:2px solid #f5f5f5; padding:10px; overflow-x:scroll;}
  input[type=radio] {
     display:none;
 }
+
 input[type=radio] + label {
     display:inline-block;
 	width:95%;
@@ -17,7 +21,10 @@ input[type=radio] + label {
 	margin-bottom:10px;
 	cursor:pointer;
 }
-input[type=radio] + label:hover{ border:1px solid #000000;}
+
+input[type=radio] + label:hover{ border:1px solid #000000;
+}
+
 input[type=radio]:checked + label {
    background-image: none;
    background-color:#0C0;
@@ -29,14 +36,16 @@ input[type=radio]:checked + label {
 -ms-transition: all 0.2s ease-in-out;
 transition: all 0.2s ease-in-out;
 }
-.worngans{ background-color:#F36;color:#fff; border:1px solid #F36 !important;-webkit-transition: all 0.2s ease-in-out;
+
+.worngans { background-color:#F36;color:#fff; border:1px solid #F36 !important;-webkit-transition: all 0.2s ease-in-out;
 -moz-transition: all 0.2s ease-in-out;
 -o-transition: all 0.2s ease-in-out;
 -ms-transition: all 0.2s ease-in-out;
-transition: all 0.2s ease-in-out;}
+transition: all 0.2s ease-in-out;
+}
 
 body {
-  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-family: 'Pacifico', cursive;;
   background-position: center;
   background-size: cover;
 }
@@ -64,46 +73,6 @@ body {
 .topnav a.active {
     background-color: #006600;
     color: white;
-}
-
-
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-}
-
-.fa.hover {
-  opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
-
-.fa-rss {
-  background: #ff6600;
-  color: white;
 }
 
 
@@ -146,13 +115,8 @@ p {
   position:relative;
    left:0px;
    bottom:0px;
-   height:240px;
+   height:140px;
    width:100%;
    background: #b3e6ff;
    opacity: 0.9;
-}
-
-.tweet_tab {
-  float: right;
-  text-align: right;
 }
