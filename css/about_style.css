@@ -2,15 +2,16 @@
     background-color: #333;
     overflow: hidden;
     font-family: 'Pacifico', cursive;
+    text-align: center;
 }
 
 .topnav a {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 3px;
+    padding: 8px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .topnav a:hover {
@@ -121,4 +122,15 @@ input {
   font-size: 14px;
   font-family: 'Pacifico', cursive;
 
+}
+
+li {
+  display: inline-flex;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    overflow:hidden;
+    margin: 0;
 }
