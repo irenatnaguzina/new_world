@@ -131,6 +131,7 @@ var JQVMap = function (params) {
   this.index = JQVMap.mapIndex;
   this.label = jQuery('<div/>').addClass('jqvmap-label').appendTo(jQuery('body')).hide();
 
+  
 
   map.countries = [];
 
@@ -825,16 +826,6 @@ JQVMap.prototype.placePins = function(pins, pinMode){
     });
   }
 
-  this.positionPins();
-  if(!this.pinHandlers){
-    this.pinHandlers = true;
-    var positionFix = function(){
-      map.positionPins();
-    };
-    this.container.bind('zoomIn', positionFix)
-      .bind('zoomOut', positionFix)
-      .bind('drag', positionFix);
-  }
 };
 
 JQVMap.prototype.positionPins = function(){
