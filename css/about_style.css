@@ -141,4 +141,10 @@ body {
   background-attachment: fixed;
   background-size: cover;
   font-size: 20px;
+  min-width:inherit;
+  text-align: center;
+  margin-left: 0 auto;
 }
+
+body { min-width: 980px; text-align: center; }
+#wrapper { width: 980px; margin: 0 auto; text-align: left; }
