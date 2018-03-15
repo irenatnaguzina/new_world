@@ -134,3 +134,11 @@ ul {
     overflow:hidden;
     margin: 0;
 }
+body {
+  font-family: 'Pacifico', cursive;;
+  background-position:top;
+  background-repeat: no-repeat, center center fixed;
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 20px;
+}
