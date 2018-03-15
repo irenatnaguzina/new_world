@@ -32,6 +32,7 @@ h1 {
 
 .tweet_tab {
   float: right;
+  max-height:inherit;
 }
 
 body {
@@ -105,7 +106,7 @@ p {
    left:0px;
    bottom:0px;
    height:240px;
-   width:85%;
+   width:auto;
    background: #006600;
    opacity: 0.9;
 }
