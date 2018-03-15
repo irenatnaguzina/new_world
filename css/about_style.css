@@ -32,7 +32,7 @@ h1 {
 
 .tweet_tab {
   float: right;
-  
+
 }
 
 body {
@@ -146,6 +146,3 @@ body {
   text-align: center;
   margin-left: 0 auto;
 }
-
-body { min-width: 980px; text-align: center; }
-#wrapper { width: 980px; margin: 0 auto; text-align: left; }
