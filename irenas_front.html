@@ -1,0 +1,216 @@
+<html>
+  <head>
+    <title>JQVMap - World Map</title>
+
+    <link href="../map.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/jqvmap.css" media="screen"/>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.vmap.js"></script>
+    <script type="text/javascript" src="js/jquery.vmap.world.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/jquery.vmap.sampledata.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+<h1> Endangered species </h1>
+
+  <div class="topnav">
+    <ul>
+      <li><a class="active" href="irenas_front.html">Around the World</a></li>
+      <li><a href="quiz.html">Test your knowedge</a></li>
+      <li><a href="about.html">About</a></li>
+  </ul>
+  </div>
+
+<div id=backgroundimage>
+<body background="gifs/jungle4.jpg">
+</div>
+  <style type="text/css">
+  div#vmap {
+      position: absolute;
+      margin:0 auto 0 auto;}
+
+.map-tooltip {
+  width: 50px;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 25px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 8px 3px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.fa-rss {
+  background: #ff6600;
+  color: white;
+}
+
+  </style>
+
+    <script>
+      jQuery(document).ready(function () {
+        jQuery('#vmap').vectorMap({
+          map: 'world_en',
+          pinMode: 'content',
+          backgroundColor: '#333333',
+          color: '#ffffff',
+          hoverOpacity: 0.7,
+          selectedColor: '#666666',
+          showTooltip: true,
+          scaleColors: ['#FFFFCC', '#336600'],
+          values: sample_data,
+          normalizeFunction: 'polynomial'
+        });
+        jQuery('#vmap').vectorMap(
+{
+    onLabelShow: function(event, label, code)
+    {
+
+        if (code == 'ca')
+        {
+            // Label for Canada - polar bear
+            label.html('<div class="map-tooltip><h2 class="header"><b>Canada</b></h2><p class="description"><b>Polar bear</b><br/>They are the planet’s biggest land-based <br/>carnivores – but they actually spend most<br/> of their lives around water and ice. They <br/>depend on sea ice to hunt but global <br/>warming is causing the ice to rapidly melt<br/> away. They mainly eat seals, using their <br/>strong sense of smell they can detect<br/> a seal in the water beneath a metre of<br/> snow. Their fur is translucent only <br/>appearing white becuase it reflects <br/>visible light and their skin is black!<br/><img src="gifs/polar bear.gif" alt="Polar Bear" height=175 width=300></img></p></div>');
+        }
+        else if (code == 'ru')
+        {
+            // Label for Russia - amur leopard
+            label.html('<div class="map-tooltip><h1 class="header"><b>Russian Federation</b></h1><p class="description"><b>Amur leopard</b><br/>The critically endangered Amur leopard <br/>can be found in the far east of Russia <br/>making it the world’s rarest cat. </p>There are only between 60-70<br/>known leopards currently in the wild.<br/><img src="gifs/amur_leopard.gif" alt="Amur Leopard" height=175 width=300></img></div>');
+        }
+        if (code == 'us')
+        {
+            // Label for the States - red wolf
+            label.html('<div class="map-tooltip><h1 class="header"><b>The United States</b></h1><p class="description"><b>Red wolf</b><br/>They look like a mix of a coyote and a <br/>gray wolf but this species is critically<br/> endangered due to aggressive predator-<br/>control programs, habitat destruction and <br/>coyote hybridisation. Captive breeding <br/>and reintroduction have been started<br/> since 1973 to try and save the species.<br/><img src="gifs/redwolf.gif" alt="Red Wolf" height=175 width=300></img></div>');
+        }
+
+        if (code == 'id')
+        {
+            // Label for the Indonesia - Orangutan
+            label.html('<div class="map-tooltip><h1 class="header"><b>Indonesia</b></h1><p class="description"><b>Orangutan</b><br/>Their name means "Person of the forest" <br/>but more than 100,000 orangutans have<br/> been killed in Borneo since 1999.<br/>Deforestation, driven by logging, oil palm,<br/>mining and paper mills as well as hunting<br/>in retaliation to crop-raiding are a major<br/>issue to population declines.</p><img src="gifs/orangutan.gif" alt="Orangutan" height=175 width=300></img></div>');
+        }
+
+        if (code == 'za')
+        {
+            // Label for the South Africa - cheetah
+            label.html('<div class="map-tooltip><h1 class="header"><b>South Africa</b></h1><p class="description"><b>Cheetah</b><br/>Predicted to be less than 8000 left in the<br/> wild due to habitat loss and poaching <br/>from farmers</p>Cheetahs are the fastest land animal, <br/>with atop speed of 120 kph and an 8 <br/>metre stride when running!<br/><img src="gifs/cheetah.gif" alt="Cheetah" height=175 width=300></img></div></div>');
+        }
+
+        if (code == 'cd')
+        {
+            // Label for the Congo - gorilla
+            label.html('<div class="map-tooltip><h1 class="header"><b>Congo</b></h1><p class="description"><b>Mountain Gorilla</b><br/>Mountain gorillas live in forests high in <br/>the mountains, but as humans have <br/>moved further into their territory they<br/> have been forced further into more <br/>dangerous and deadly mountainous <br/>conditions higher up.<br/><img src="gifs/gorilla.gif" alt="Gorilla" height=175 width=300></img></div>');
+        }
+
+        if (code == 'ng')
+        {
+            // Label for the Nigeria - Pangolin
+            label.html('<div class="map-tooltip><h1 class="header"><b>Nigeria</b></h1><p class="description"><b>Pangolin</b><br/>The world’s most illegally trafficked<br/> mammal and the only mammal to have <br/>scales. Pangolins are found in Asia and<br/>Africa but over 1 million have been killed<br/> in the past decade.<p>When threatened a pangolin will roll up <br/>into a ball, exposing its armor of scales<br/> to predators.<br/><img src="gifs/pangolin.gif" alt="Pangolin" height=175 width=300></img></p></div>');
+        }
+
+        if (code == 'au')
+        {
+            // Label for the Australia - Tasmanian devil
+            label.html('<div class="map-tooltip><h1 class="header"><b>Australia and Tasmania</b></h1><p class="description"><b>Tasmanian devil</b><br/>Though known as the menancing villian<br/> on Looney Tunes, the Tasmanian devil is<br/> a small carnivorous marsupial. It was <br/>once native to Australia but is now only<br/> found on the island state of Tasmania.</p>Between 1996 and 2008, the population <br/>of Tasmanian devils dropped some 60% <br/>due a contagious cancer known as Devil <br/>Facial Tumour Disease.<br/><img src="gifs/tasmanian_devil.gif" alt="Tasmanian Devil" height=175 width=300></img></div>');
+        }
+
+        if (code == 'tz')
+        {
+            // Label for the Tanzania - wild dog
+            label.html('<div class="map-tooltip><h1 class="header"><b>Tanzania</b></h1><p class="description">African painted dogs<br/>Africa’s most endangered carnivore with<br/>experts predict only 1500 breeding dogs<br/> left in the wild.</p>As human populations increase and <br/>villages expanding, their habitat becomes <br/>more destroyed giving them less territory<br/> to find food sources.<br/><img src="gifs/wild_dog.jpg" alt="Wild Dog" height=175 width=300></img></div>');
+        }
+
+        if (code == 'th')
+        {
+            // Label for the Thailand -  tiger
+            label.html('<div class="map-tooltip><h1 class="header"><b>Thailand</b></h1><p class="description"><b>Tiger</b><br/>Six species of tiger are considered to be <br/>endangered, ranging from the Sumatran, <br/>Amur, Bengal, Indochinese, Malayan and <br/>the South China tiger. The South China <br/>tiger was thought to have around 4,000 <br/>tigers in 1950. Today they are considered<br/> to be ‘functionally extinct’, as it has not<br/> been seen for more than 25 years.<br/><img src="gifs/tiger.gif" alt="Tiger" height=175 width=300></img></div>');
+        }
+
+        if (code == 'cn')
+        {
+            // Label for the China - giant panda
+            label.html('<div class="map-tooltip><h1 class="header"><b>China</b></h1><p class="description"><b>Giant panda</b><br/>Pandas can eat bamboo for 14 hours a day. <br/>They help keep their forest habitat healthy<br/> by spreading seeds in their droppings.<br/> Tradiational farming activities such as fuel-<br/>wood collection, medicl herb collection,<br/> livestock grazing and mining have disturbed <br/>their habitat.<br/><img src="gifs/panda.gif" alt="Giant Panda" height=175 width=300></img></p></div>');
+        }
+
+        if (code == 'in')
+        {
+            // Label for the India - asian elephant
+            label.html('<div class="map-tooltip><h1 class="header"><b>India</b></h1><p class="description"><b>Asian elephant</b><br/>The growing human population in India, <br/>and elsewhere in Asia, creates conflicts <br/>for space and resources between humans<br/> and the elephants. While the tusks of Asian <br/>elephants are much smaller than those of <br/>their African counterparts, the Asian species<br/> is still poached for its ivory, meat, and skin.<br/><img src="gifs/elephant.gif" alt="Asian Elephant" height=175 width=300></img></div>');
+        }
+
+        if (code == 'ke')
+        {
+            // Label for the Kenya - rhino
+            label.html('<div class="map-tooltip><h1 class="header"><b>Kenya</b></h1><p class="description"><b>Rhino</b><br/>Poaching for their horns on the black <br/>market as well as habitat loss has led to <br/>devastating population declines.</p>However, progress has been made with<br/> recent research showing an increase in <br/>rhino populations from less than 600 in <br/>the 1960’s to an estimated population <br/>of 3,500 today.<br/><img src="gifs/rhino.gif" alt="Rhino" height=175 width=300></img></div>');
+        }
+
+        if (code == 'mn')
+        {
+            // Label for the Mongolia - snow leopard
+            label.html('<div class="map-tooltip><h1 class="header"><b>Mongolia</b></h1><p class="description"><b>Snow leopard</b><br/>It is estimated that less than 6,500 remain <br/>in the wild, but due to their remote habitat <br/>and elusive nature, data is hard to come <br/>by. Its natural prey include bharal and ibex,<br/> but in some areas, it is heavily dependent<br/> on domestic animals. Poaching is still a <br/>major threat to the species.<br/><img src="gifs/snow_leopard.gif" alt="Snow Leopard" height=175 width=300></img></p></div>');
+        }
+
+        if (code == 'br')
+        {
+            // Label for the Brazil - Jaguar
+            label.html('<div class="map-tooltip><h1 class="header"><b>Brazil</b></h1><p class="description"><b>Jaguar</b><br/>The jaguar is the largest cat in the <br/>Americas. Their ultra-strong jaws and <br/>teeth can bite through a crocodile skull <br/>or turtle shell.<p>With its forest home increasingly being <br/>destroyed, illegal hunting for their paws <br/>and teeth and conflict growing with<br/> farmers, the jaguar is under big pressure. <br/>Jaguars now occupy less than half of <br/>their historical range.<br/><img src="gifs/jaguar.jpeg" alt="Jaguar" height=175 width=300></img></p></div>');
+        }
+
+        if (code == 'gb')
+        {
+            // Label for the UK - house sparrows
+            label.html('<div class="map-tooltip><h1 class="header"><b>United Kingdom</b></h1><p class="description"><b>House sparrow</b><br/>Due to the increase in pesticides in<br/> agriculture to eradicate insect pests house <br/>sparrows have become endangered in the <br/>UK as their food source is vanishing. <br/><img src="gifs/house_sparrow.jpg" alt="House Sparrow" height=175 width=300></img></p></div>');
+        }
+    },
+});
+      });
+    </script>
+
+  <body>
+    <div id="vmap" style="width: 800px; height: 450px;"></div>
+  </body>
+
+
+  </div>
+
+  </form>
+  </div>
+  </div>
+  </div>
+
+
+    <a href="https://www.facebook.com/worldwildlifefund" class="fa fa-facebook"></a>
+
+    <a href="https://twitter.com/world_wildlife" class="fa fa-twitter"></a>
+
+    <a href="https://instagram.com/World_Wildlife" class="fa fa-instagram"></a>
+
+    <a href="https://www.youtube.com/subscription_center?add_user=wwfus" class="fa fa-youtube"></a>
+
+    <a href="https://www.worldwildlife.org/pages/rss-feeds" class="fa fa-rss"></a>
+
+  </div>
+
+
+</div>
+</body>
+</html>
